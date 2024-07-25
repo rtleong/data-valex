@@ -32,6 +32,7 @@ def validate_dataset(file_path):
     ge_df = ge.from_pandas(df)
     
     # Define expectations
+    #fuzzy support after
     expectations = [
         ge_df.expect_column_to_exist('column_name'),
         ge_df.expect_column_values_to_be_between('column_name', min_value=0, max_value=100),
